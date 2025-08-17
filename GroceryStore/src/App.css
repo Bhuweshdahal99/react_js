@@ -1,42 +1,145 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+}
+header{
+  padding: 27px 30px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.searchForm{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  border-bottom:3px solid #fff;
+}
+.searchInp{
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  /* border-bottom: 3px solid #fff; */
+  background-color: #333;
+  caret-color: #fff;
+}
+.searchInp:focus{
+  /* border-bottom: 3px solid rgb(56, 158, 231); */
+}
+.searchInp::placeholder{
+  color: #fff;
+}
+.searchInp:focus::placeholder{
+  color: rgb(191, 192, 193);
+}
+
+.AddItem button{
+  width: fit-content;
+  background-color: rgb(56, 158, 231);
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 15px;
+  margin: 20px;
+}
+.AddItem{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.AddItem input{
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  border-bottom: 2px solid #333;
+}
+.AddItem input:focus{
+  border-bottom: 2px solid rgb(56, 158, 231);
+}
+
+main{
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.itemName{
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.price{
+  font-size: 18px;
+  color: #333;
+  margin-left: 25px;
+}
+.checkbox{
+  height: 30px;
+  width: 25px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item{
+  margin: 20px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  box-shadow: 0 0 20px -10px grey;
+}
+.delBtn{
+  padding: 10px 20px;
+  color: antiquewhite;
+  background-color: rgb(241, 11, 57);
+  border: none;
+  cursor: pointer;
+  border-radius: 17px;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.con1{
+  width: 10%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.con2{
+  width: 40%;
+  text-align: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.con3{
+  width: 30%;
 }
